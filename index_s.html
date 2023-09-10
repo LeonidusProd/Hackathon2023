@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>DCS</title>
+	<script src="https://kit.fontawesome.com/b8991598b2.js"></script>
+	<link rel="stylesheet" href="styless_s.css">
+	<script src="script.js"></script>
+</head>
+<body>
+	
+	<div class="container">
+		<header class="header">
+			<div class="logo">
+				<img src="images/DCS-transformed.png" width="240"  >
+				<img src="images/эвотор.png" width="240"  >
+			</div>
+			
+			<div class="search-box">
+				<input class="search-txt"type="text"name="" placeholder="Поле поиска товара">
+				<a class="search-bth" href="#">
+				<i class="fas fa-search"></i>
+			    </a>
+
+			</div>	
+			<div class="up">
+				
+			</div>
+			<div class="korz">
+				
+			</div>
+			
+		</header>
+		<nav class="main-menu">
+			<div class="main_korz">Корзина</div>
+			<ul class="main-menu-list">
+				
+				
+			</ul>
+		</nav>
+		
+
+		
+		 <div class="content">
+			<aside class="sidebar"> 
+				<div class="item">Товар</div> 
+				<div class="price">Цена</div> 
+				<div class="quantity">Количество</div> 
+				<div class="tov1">
+				<img src="images/карандаш.jpeg" width="220" ></div>
+				<div class="tov1_op">
+				 Карандаш для губ Lip Liner Letique Makeup </div><br><br>
+				 <div style="border-bottom: solid 2px #3f3e3e;"></div>
+
+				<div class="tov2">
+				<img src="images/краб.jpg" width="220" ></div>
+				<div class="tov2_op">
+					Скраб для тела SAKURA, 250 гр </div>
+			</aside>
+			<section class="section sidebar2">
+				<div class="button">
+					<a href="#" id="show-link">Рекомендуемые товары</a>
+					<!-- <button id ="show-button" >Рекомендуемые товары</button> -->
+				</div>
+				<div class="recom">
+					<div id="random-word"></div>
+				</div>
+				
+			</section>
+		</div>
+	
+		<footer class="footer">
+			
+		</footer>		
+	</div>	
+	<script>
+		// Массив слов
+		const words = ["Коробка подарочная A MILLION KISSES", "Крем-баттер для тела Франжипани-Монои", "Помада для  губ матовая  Matte lipstick Letique Makeup", "Соль для ванны SAKURA", "Лосьон для тела FALLING IN LOVE"];
+		
+		// Получаем ссылки на элементы ссылки и контейнера для случайного слова
+		const link = document.getElementById('show-link');
+		const randomWordContainer = document.getElementById('random-word');
+		
+		// Добавляем обработчик события для ссылки
+		link.addEventListener('click', function (e) {
+		e.preventDefault(); // Предотвращаем переход по ссылке
+		
+		// Генерируем случайное число от 0 до длины массива слов
+		const randomIndex = Math.floor(Math.random() * words.length);
+		
+		// Получаем случайное слово из массива
+		const randomWord = words[randomIndex];
+		
+		// Отображаем случайное слово
+		randomWordContainer.textContent = randomWord;
+		});
+		</script>
+</body>
+</html>
